@@ -1,0 +1,4 @@
+INFO 2025-05-25 09:54:37,297 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-05-25 09:54:48,150 django.utils.autoreload Watching for file changes with StatReloader
+WARNING 2025-05-25 09:55:01,798 django.request Unauthorized: /anime/recommendations/
+WARNING 2025-05-25 09:55:01,800 django.server "GET /anime/recommendations/ HTTP/1.1" 401 172
