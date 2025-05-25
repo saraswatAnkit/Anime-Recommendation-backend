@@ -76,4 +76,5 @@ POST /auth/register – Register a new user.
 POST /auth/login – Login and retrieve a JWT token.
 GET /anime/search – Search anime by name or genre.
 GET /anime/recommendations – Fetch personalized recommendations for the authenticated user.
-GET /auth/preferences – Manage user preferences (e.g., favorite genres).
+GET /user/preferences – Manage user preferences (e.g., favorite genres).
+POST /user/preferences – Add user preferences (e.g., favorite genres).
