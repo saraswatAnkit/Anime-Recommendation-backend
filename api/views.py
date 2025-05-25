@@ -32,8 +32,12 @@ def user_preferences(request):
     user = request.user
     if request.method == 'POST':
         genres = request.data.get('favorite_genres')
-        obj, created = UserPreference.objects.update_or_create(user=user, defaults={'favorite_genres': genres})
-        logger.info(f"User {user.username} updated preferences: {genres}")
+        if isinstance(genres, list):
+            genres_str = ','.join([g.strip() for g in genres])
+        else:
+            genres_str = genres.strip()
+        obj, created = UserPreference.objects.update_or_create(user=user, defaults={'favorite_genres': genres_str})
+        logger.info(f"User {user.username} updated preferences: {genres_str}")
         return Response({'message': 'Preferences updated'})
     else:
         try:
